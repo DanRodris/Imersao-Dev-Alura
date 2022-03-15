@@ -1,8 +1,8 @@
 var nome = "Danilo"
 var notaDoPrimeiroBimestre = 9.565
 var notaDoSegundoBimestre = 7.654
-var notaDoTerceiroBimestre = 4.789  
-var notaDoQuartoBimestre = 2.9987
+var notaDoTerceiroBimestre = 9.789  
+var notaDoQuartoBimestre = 9.9987
   
 var notaFinal = (notaDoPrimeiroBimestre + notaDoSegundoBimestre + notaDoTerceiroBimestre + notaDoQuartoBimestre) / 4
 var notaFixada = notaFinal.toFixed(1)
