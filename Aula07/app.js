@@ -28,7 +28,9 @@ var carta3 = {
     }
 }
 
-var cartas = [carta1,carta2,carta3]
+
+
+var cartas = [carta1,carta2,carta3.length]
 var cartaMaquina 
 var cartaJogador
 
