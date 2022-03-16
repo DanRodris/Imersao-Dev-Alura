@@ -1,100 +1,97 @@
-var carta1 ={
+var carta1 = {
     nome: "Bulbassauro",
     atributos:{
-        Ataque: 5,
+        Ataque: 7,
         Defesa: 8,
         Mágia: 6
+
     }
 }
 
-var carta2 ={
-    nome: "darth vader",
+var carta2 = {
+    nome: "Darth Vader",
     atributos:{
-        ataque: 9,
-        defesa: 9,
-        magia: 8
+        Ataque: 8,
+        Defesa: 9,
+        Mágia: 10
+
     }
 }
 
-var carta3 ={
-    nome: "Shiryu de dragão",
+var carta3 = {
+    nome: "Shiryu do Dragão",
     atributos:{
-        ataque: 10,
-        defesa: 10,
-        magia: 10
+        Ataque: 10,
+        Defesa: 8,
+        Mágia: 9
+
     }
 }
+
 var cartas = [carta1,carta2,carta3]
-var cartaMaquina
+var cartaMaquina 
 var cartaJogador
 
 function sortearCarta() {
-var numeroCartaMaquina= parseInt(Math.random() * 3)
-    cartaMaquina = cartas[numeroCartaMaquina]
+    var numeroCartaMaquina = parseInt(Math.random() * 3)
+
+    cartaMaquina = cartas[numeroCartaMaquina];
 
    
-
-var numeroCartaJogador= parseInt(Math.random()* 3)
+    var numeroCartaJogador = parseInt(Math.random() * 3);
     while (numeroCartaMaquina == numeroCartaJogador){
-        numeroCartaJogador= parseInt(Math.random()* 3)
+        numeroCartaJogador = parseInt(Math.random() * 3);
     }
 
-    cartaJogador = cartas[numeroCartaJogador]
+    cartaJogador = cartas[numeroCartaJogador];
 
- 
-   console.log (cartaJogador)
-document.getElementById("btnSortear").disabled = true;
-document.getElementById("btnJogar").disabled = false;
 
-exibirOpcoes()
+    document.getElementById("btnSortear").disabled = true;
+    document.getElementById("btnJogar").disabled = false;
 
+    exibirOpcoes()
 }
-
 
 
 
 function exibirOpcoes(){
-    var opcoes = document.getElementById("opcoes")
-    var opcoesTexto =  ""
+    var opcoes = document.getElementById("opcoes");
+    var opcoesTexto = ""
 
-    for (var atributo in cartaJogador.atributos){
-        opcoesTexto += "<input type = 'radio' name = 'atributo' value= '" + atributo + "'>" + atributo
-
+    for ( var atributo in cartaJogador.atributos){
+        opcoesTexto += "<input type = 'radio' name ='atributo' value='" + atributo + "'>" + atributo
     }
-    opcoes.innerHTML = opcoesTexto
+    opcoes.innerHTML = opcoesTexto;
 }
-
-
-
-
-
-
-
 
 function obtemAtributoSelecionado(){
-    var radioAtributos = document.getElementsByName("atributo")
+    var radioAtributos = document.getElementsByName("atributo");
 
-    for (var i = 0; i < radioAtributos.lenght; i ++){
-        if(radioAtributos[i].checked == true){
-            return radioAtributos[i].value
+    for (var i = 0; i < radioAtributos.length; i ++){
+        if (radioAtributos[i].checked == true){
+            return radioAtributos[1].value
+
         }
     }
+
 }
 
-
-
 function jogar(){
-    var atributoSelecionado = obtemAtributoSelecionado()
+    var atributoSelecionado = obtemAtributoSelecionado();
     var elementoResultado = document.getElementById("resultado")
     var valorCartaJogador = cartaJogador.atributos[atributoSelecionado]
     var valorCartaMaquina = cartaMaquina.atributos[atributoSelecionado]
 
     if (valorCartaJogador > valorCartaMaquina){
-        elementoResultado.innerHTML = "Você venceu"
+        elementoResultado.innerHTML = "Você Venceu"
     }else if (valorCartaMaquina > valorCartaJogador){
-        elementoResultado.innerHTML = "Você perdeu, a carta da máquina é maior"
+        elementoResultado.innerHTML = "Você Perdeu, a carta da máquina é maior"
     }else{
         elementoResultado.innerHTML = "Empatou"
     }
     console.log(cartaMaquina)
+    console.log(cartaJogador)
+
 }
+
+
