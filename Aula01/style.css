@@ -1,40 +1,103 @@
-body {
-    font-family: 'roboto mono',monospace;
-    min-height: 400px;
-    background-image: url('https://caelum-online-public.s3.amazonaws.com/imersao-dev-3/bg.png');
-    background-color:#4e5c69;
-    background-size: 80vh;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    }
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@700&display=swap");
 
-    .container{
+body{
+    
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 35px;
+    background-color: #000;
+    
+    
+    
 
-        text-align: center;
-        padding: 20px;
-        height: 100vh;
-    }
+}
+.box-one{
+    background-image: url('https://images.pexels.com/photos/6238037/pexels-photo-6238037.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: 230vh;
+   
+    
+     background-repeat: no-repeat;
+    
+    border: 1px solid #000;
+    border-radius: 10px;
+    
 
-    .page-title{
+    /* estilo de posicionamento e largura */
+   
+   height: 600px;
 
-        color: #ffffff;
-        margin: 0 0 5px;
-    }
-    .page-subtitle{
+   margin: 0 auto 0 auto; /*centralizando a DIV */
+   
+   
+    
+    
+    
+}
 
-        color: #ffffff;
-        margin-top: 5px;
-    }
 
-    .page-logo{
+.box-two{
+    margin-top: 30px;
+}
 
-        width: 200px;
-    }
 
-    .alura-logo{
+input{
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: inherit;
+    box-shadow: 4px 4px 0 #000;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
 
-        width: 40px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
+button{
+    background-color: rgb(217, 255, 0);
+    font-family: inherit;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.box-three{
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: rgb(245, 245, 244);
+    border-radius: 5px;
+    margin-top: 10px;
+    border: solid;
+    
+
+
+}
+.text-one{
+    color: rgb(58, 7, 245);
+    text-shadow: rgb(14, 13, 13) 1px 0px  1px;
+    font-family: inherit;
+    margin: 5px;
+    
+}
+.text-two{
+    text-align: center;
+    
+
+    
+    color: red;
+    text-shadow: black 2px 1px  2px; 
+    font-family: inherit;
+    
+}
+
+.page-title{
+    
+    text-shadow: rgb(127, 128, 126) 1px 0px  5px;
+    
+}
+.page-subtitle{
+    
+    
+    text-shadow: rgb(250, 238, 238) 1px 0px  5px;
+    
+}
